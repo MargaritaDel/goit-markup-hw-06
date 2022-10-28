@@ -67,6 +67,8 @@ header {
   max-width: 100%;
 }
 
+/* navigation section */
+
 .logo {
   padding-top: 24px;
   padding-bottom: 24px;
@@ -698,6 +700,11 @@ header {
   cursor: pointer;
 }
 
+.mail-subscription:focus,
+.mail-subscription:hover {
+  border-color: var(--accent-color);
+}
+
 .submit-btn {
   display: flex;
   justify-content: center;
@@ -750,8 +757,8 @@ header {
   pointer-events: none;
 }
 
-.backdropis-hidden .modal {
-  transform: translate(-50%, -50%) scale(2);
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(3);
 }
 
 .modal {
@@ -781,12 +788,13 @@ header {
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-close-btn:hover,
 .form-close-btn:focus {
   fill: var(--accent-color);
+
 }
 
 .form-title {
@@ -821,10 +829,13 @@ header {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input:focus {
   border-color: var(--accent-color);
+
+
 }
 
 .form-control:focus-within .form-icon {
@@ -905,12 +916,20 @@ header {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  display: flex;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 
 .checkbox-label {
+  display: flex;
+  gap: 2px;
   position: relative;
-  margin-left: 9px;
 }
 
 
@@ -918,12 +937,15 @@ header {
   fill: var(--white-color);
   border: 2px solid var(--logo-color);
   border-radius: 2px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -21px;
 }
-
-
 
 .checkbox-input:checked+.checkbox-icon {
   background-color: var(--accent-color);
   border-color: transparent;
-  transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
