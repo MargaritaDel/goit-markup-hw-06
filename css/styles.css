@@ -681,6 +681,8 @@ header {
   background-color: var(--accent-color);
 }
 
+/* subscription section */
+
 .mail-subscription {
   display: flex;
   width: 358px;
@@ -925,13 +927,11 @@ header {
 
 }
 
-
 .checkbox-label {
   display: flex;
   gap: 2px;
   position: relative;
 }
-
 
 .checkbox-icon {
   fill: var(--white-color);
